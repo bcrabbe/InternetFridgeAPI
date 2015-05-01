@@ -1,0 +1,10 @@
+{"request": "createUser", "name":"Ben" }
+
+{"request": "selectUser", "userName":"Ben" }
+
+{"request": "addProduct", "EAN":1234567891011,"name":"milk", "daysToUseByAfterOpening":5,
+"storageRequirementsID":3 }
+
+{"request": "addItemToInventory", "EAN":1234567891011, "useByDate": "2015-05-02" }
+
+{"request": "addUseBy", "EAN":1234567891011, "data": {"useByDate": "2015-05-02"} }

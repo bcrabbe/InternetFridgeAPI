@@ -1,0 +1,9 @@
+{"request": "insert", "id":123, "data": {"name": "Milk"} }
+
+{"request": "insert", "id":1234, "data": {"name": "Butter"} }
+
+{"request": "list"}
+
+{"request": "insert", "id":12345, "data": {"name": "Cheese"} }
+
+{"request": "list"}
