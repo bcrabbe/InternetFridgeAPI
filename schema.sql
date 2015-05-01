@@ -22,7 +22,7 @@ INSERT INTO storageRequirements(message) VALUES('none specified'),
 
 CREATE TABLE IF NOT EXISTS products (
     EAN INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
+    name TEXT,
     daysToUseByAfterOpening INT,
     storageRequirementsID INT,
     averageStock REAL DEFAULT 0,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS inventory (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     dateAdded TEXT,
     useByDate TEXT,
-    dateOpened TEXT,
+    dateOpened TEXT DEFAULT 'unopened',
     productEAN INT,
     ownerID INT,
     borrowingMessageID INT DEFAULT '1',
@@ -43,6 +43,11 @@ CREATE TABLE IF NOT EXISTS inventory (
     FOREIGN KEY(ownerID) REFERENCES users(ID),
     FOREIGN KEY(borrowingMessageID) REFERENCES borrowingMessages(ID)
 );
+
+
+INSERT INTO inventory(dateAdded,productEAN,ownerID) VALUES('2014-03-01',1234567891011,1),
+('2015-01-01',1234567891012,1);
+
 
 CREATE TABLE IF NOT EXISTS usedItems (
    ID INTEGER PRIMARY KEY,

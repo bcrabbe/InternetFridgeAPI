@@ -1,3 +1,4 @@
+
 {"request": "createUser", "name":"Ben" }
 
 {"request": "selectUser", "userName":"Ben" }
@@ -7,4 +8,50 @@
 
 {"request": "addItemToInventory", "EAN":1234567891011, "useByDate": "2015-05-02" }
 
-{"request": "addUseBy", "EAN":1234567891011, "data": {"useByDate": "2015-05-02"} }
+{"request": "addProduct", "EAN":1234567891012, "name":"cheese", "daysToUseByAfterOpening":10,
+"storageRequirementsID":3 }
+
+{"request": "addUseByToInventoryItem", "ID":2, "useByDate": "2015-05-05" }
+
+{"request": "addBorrowingMessageToInventoryItem", "ID":2, "borrowingMessageID": "2" }
+
+{"request": "listInventory" }
+
+{"request": "addItemToInventory", "EAN":1234567891011 }
+
+{"request": "addUseByToInventoryItem", "ID":2, "useByDate": "2015-05-05" }
+
+{"request": "inventoryItemOpened", "ID":2 }
+
+{"request": "inventoryItemFinished", "ID":2 }
+
+{"request": "iventoryItemDetails", "ID":1 }
+
+{"request": "addItemToInventory", "EAN":1234567891012, "useByDate": "2013-05-02" }
+
+{"request": "addItemToInventory", "EAN":1234567891011, "useByDate": "2011-05-02" }
+
+{"request": "addItemToInventory", "EAN":1234567891011, "useByDate": "2012-05-02" }
+
+{"request": "listInventory" }
+
+{"request": "listExpiredItems" }
+
+{"request": "inventoryItemFinished", "ID":4 }
+
+{"request": "inventoryItemFinished", "ID":3 }
+
+{"request": "inventoryItemFinished", "ID":1 }
+
+{"request": "inventoryItemFinished", "ID":7 }
+
+{"request": "inventoryItemFinished", "ID":6 }
+
+{"request": "inventoryItemFinished", "ID":5 }
+
+
+{"request": "calculateAverageStock" }
+
+{"request": "generateShoppingList" }
+
+{"request": "selectUser", "userName":"Ben" }
